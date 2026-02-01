@@ -1,0 +1,95 @@
+
+/* Vercel Toast Hide */
+.vercel-toast {
+    display: none !important;
+}
+
+/* Custom Animations for Chat & UI */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 215, 0, 0.5); }
+    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+}
+
+.animate-glow {
+    animation: glow 2s infinite;
+}
+
+/* Hide scrollbar for clean UI */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* DARK MODE SUPPORT (True Black) */
+@media (prefers-color-scheme: dark) {
+    /* Auto-enable if system preference is dark, can be overridden by class */
+    /* Commented out to require explicit class for now to avoid breaking existing users unexpectedly */
+    /* :root { --bg-primary: #000000; } */
+}
+
+body.dark-mode {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .bg-white,
+.dark-mode .bg-slate-50,
+.dark-mode .bg-slate-100 {
+    background-color: #000000 !important;
+    border-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .bg-slate-50 {
+    background-color: #000000 !important;
+}
+
+.dark-mode .bg-slate-900, 
+.dark-mode .bg-slate-950 {
+    background-color: #111111 !important; /* Slightly lighter for contrast against black bg */
+    border-color: #333333 !important;
+}
+
+.dark-mode .text-slate-900,
+.dark-mode .text-slate-800,
+.dark-mode .text-slate-700,
+.dark-mode .text-gray-900,
+.dark-mode .text-gray-800 {
+    color: #ffffff !important;
+}
+
+.dark-mode .text-slate-600,
+.dark-mode .text-slate-500,
+.dark-mode .text-gray-600,
+.dark-mode .text-gray-500 {
+    color: #a3a3a3 !important;
+}
+
+.dark-mode .border-slate-100,
+.dark-mode .border-slate-200 {
+    border-color: #333333 !important;
+}
+
+.dark-mode .shadow-lg, 
+.dark-mode .shadow-xl, 
+.dark-mode .shadow-2xl {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Input Fields in Dark Mode */
+.dark-mode input, 
+.dark-mode textarea, 
+.dark-mode select {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+/* Cards separation */
+.dark-mode .border {
+    border-color: #333333 !important;
+}
